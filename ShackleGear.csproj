@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net461</TargetFramework>
+		<OutputType>Library</OutputType>
+		<Version>1.2.1</Version>
+		<LangVersion>latest</LangVersion>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+	</PropertyGroup>
+
+
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProjectGuid>{51B9A11F-8D6E-40A2-8A7D-1194B804A50C}</ProjectGuid>
+		<OutputType>Library</OutputType>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<RootNamespace>ROTC_ShackleGear</RootNamespace>
+		<AssemblyName>ROTC_ShackleGear</AssemblyName>
+		<TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+		<FileAlignment>512</FileAlignment>
+		<Deterministic>true</Deterministic>
+		<TargetFrameworkProfile />
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>ROTC_ShackleGear\</OutputPath>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>ROTC_ShackleGear\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup>
+		<SignAssembly>false</SignAssembly>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<OutputPath>$(AssemblyName)</OutputPath>
+		<IntermediateOutputPath>..\..\obj\Debug\$(AssemblyName)\</IntermediateOutputPath>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<OutputPath>$(AssemblyName)</OutputPath>
+		<IntermediateOutputPath>..\..\obj\Release\$(AssemblyName)\</IntermediateOutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="VintagestoryAPI">
+		  <HintPath>..\..\..\..\VintagestoryAPI.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="VintagestoryLib">
+		  <HintPath>..\..\..\..\VintagestoryLib.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="VSCreativeMod">
+		  <HintPath>..\..\..\..\Mods\VSCreativeMod.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="VSEssentials">
+		  <HintPath>..\..\..\..\Mods\VSEssentials.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="VSSurvivalMod">
+		  <HintPath>..\..\..\..\Mods\VSSurvivalMod.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="websocket-sharp">
+		  <HintPath>..\..\..\..\Lib\websocket-sharp.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+		<Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+		  <SpecificVersion>False</SpecificVersion>
+		  <HintPath>..\..\..\..\Lib\Newtonsoft.Json.dll</HintPath>
+		  <Private>False</Private>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="assets\**">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<None Update="modinfo.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+</Project>
