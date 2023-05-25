@@ -1,12 +1,12 @@
 {
   "type": "code",
-  "modid": "shacklegeartwo",
+  "modid": "rotc_shacklegear",
   "name": "shacklegear",
   "authors": [ "SimpleBastard", "Novocain", "SpearAndFang", "KingOfTheMochas", "Xel", "nickflik0934" ],
   "description": "Allows players to imprison other players with Shackle Gears.",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "side": "universal",
   "dependencies": {
-    "game": "1.18.0"
+    "game": "1.18.5"
   }
 }
